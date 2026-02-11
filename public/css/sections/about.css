@@ -1,0 +1,96 @@
+/**
+ * ABOUT.CSS
+ * About Section and Photo Slider
+ */
+
+/* ============================================================================
+   ABOUT SECTION
+   ============================================================================ */
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* ============================================================================
+   PHOTO SLIDER
+   ============================================================================ */
+
+.photo-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.photos {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.transform-photo {
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.transform-photo:hover {
+    transform: scale(1.02);
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slider-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-btn:hover {
+    background: #e07a26;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+    }
+    
+    .slider-controls {
+        position: absolute;
+    }
+}

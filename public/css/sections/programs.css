@@ -1,0 +1,45 @@
+/**
+ * PROGRAMS.CSS
+ * Program Cards and Pricing Section
+ */
+
+/* ============================================================================
+   PROGRAMS SECTION
+   ============================================================================ */
+
+.programs-section {
+    background-color: #f9f9f9;
+}
+
+/* Program cards grid is defined in layout.css */
+
+/* Coaching Price Badge */
+.coaching-price-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin: 15px 0 10px;
+    box-shadow: 0 4px 15px rgba(242, 140, 56, 0.3);
+    animation: pulse-subtle 2s infinite;
+}
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+    .coaching-price-badge {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+    }
+}

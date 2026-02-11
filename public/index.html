@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harun Rahahla Fitness - Transform your body with personalized training programs and coaching">
+    <title>Harun Fitness</title>
+    
+    <!-- Updated CSS path -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/" defer></script>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="fixed-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/HARUNFIT.png" alt="Harun Rahahla Fitness Logo" class="logo-img">
+            </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#coaching">Coaching</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact-email" class="nav-cta">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>TRANSFORM YOUR BODY</h1>
+                    <div class="hero-buttons">
+                        <a href="#programs" class="cta-button">View Programs</a>
+                        <a href="#coaching" class="secondary-button">Apply for Coaching</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/harunfit-hero.jpg" alt="Harun Rahahla" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Journey</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>In 2019, I stepped into the gym as a skinny teenager who just wanted to feel comfortable in his own skin. I had no idea what I was doing, no structured training, no understanding of nutrition, just a strong desire to change.</p>
+
+                    <p>Over the years, I not only gained the knowledge of training and nutrition but also developed confidence, a strong mindset, and a deeper understanding of what it truly takes, not just to build a body you're proud of, but to establish lasting habits and principles that go beyond fitness.</p>
+
+                    <p>My next mission is to help others who are in the same position I once was. If you're ready to make a change, I'm here to guide you through the process.</p>
+                </div>
+
+                <div class="photo-slider">
+                    <div class="photos">
+                        <img src="images/skinny-jacked.JPEG" class="transform-photo" alt="Transformation">
+                        <img src="images/fat-lean.JPEG" class="transform-photo" alt="Body Recomposition">
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn">❮</button>
+                        <button class="slider-btn next-btn">❯</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="content-section programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Training Programs</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="program-cards">
+                <!-- Standard Program - £5.99 -->
+                <div class="program-card starter">
+                    <div class="program-badge">STANDARD</div>
+                    <h3>Standard Program</h3>
+                    <ul class="program-features">
+                        <li>Full PPL Exercise Guide</li>
+                        <li>Routine that I Follow</li>
+                        <li>Machine Focused</li>
+                        <li>Perfect for Any Stage</li>
+                    </ul>
+                    <button id="buy-starter-program" class="program-button">£5.99</button>
+                </div>
+    
+                <!-- Premium Program - £25 -->
+                <div class="program-card premium">
+                    <div class="program-badge">PREMIUM</div>
+                    <h3>Complete Transformation</h3>
+                    <ul class="program-features">
+                        <li>Complete Blueprint for Muscle Building</li>
+                        <li>In-Depth PPL Training Program</li>
+                        <li>Video Demonstrations for each Exercise</li>
+                        <li>Alternatives for most Exercises (with video)</li>
+                        <li>Training Principles & Progression</li>
+                        <li>Nutrition Basics</li>
+                    </ul>
+                    <button id="buy-paid-program" class="program-button">£25</button>
+                </div>
+    
+                <!-- Coming Soon -->
+                <div class="program-card coming-soon">
+                    <div class="program-badge">COMING SOON</div>
+                    <h3>Complete Nutrition Ebook</h3>
+                    <ul class="program-features">
+                        <li>In-Depth Nutrition Guide</li>
+                        <li>Multiple Meal Plans for Every Body Type</li>
+                        <li>How to Approach Weight Loss/Gain</li>
+                        <li>Weight Loss Without Cardio</li>
+                        <li>Calories and Macronutrients</li>
+                        <li>Flexible Dieting Principles</li>
+                        <li>When & How to Use Cardio Effectively</li>
+                        <li>Common Nutrition Mistakes to Avoid</li>
+                    </ul>
+                    <button class="program-button disabled">Coming Soon</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Coaching Section -->
+    <section id="coaching" class="content-section coaching-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>1-on-1 Coaching</h2>
+                <div class="coaching-price-badge">£200/month</div>
+                <div class="section-underline"></div>
+            </div>
+            <div class="coaching-intro">
+                <p>Ready to take your transformation to the next level? Apply for personalized coaching tailored to your specific goals and lifestyle.</p>
+            </div>
+            <div class="coaching-content">
+                <div class="coaching-benefits">
+                    <h3>What You'll Get:</h3>
+                    <ul>
+                        <li><span class="benefit-icon">✓</span> Custom Workout Plan Built Around Your Goals</li>
+                        <li><span class="benefit-icon">✓</span> Custom Meal Plan</li>
+                        <li><span class="benefit-icon">✓</span> Weekly Video Call Check Ins</li>
+                        <li><span class="benefit-icon">✓</span> Direct Messaging Support</li>
+                        <li><span class="benefit-icon">✓</span> Accountability & Motivation to Stay Consistent</li>
+                    </ul>
+                </div>
+                <form id="coaching-form" action="../api/submit.php" method="POST">
+                    <!-- CSRF Token -->
+                    <input type="hidden" name="csrf_token" id="csrf-token">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" required min="16" max="99">
+                        </div>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="goals">What are your goals? What's holding you back? (Optional)</label>
+                        <textarea id="goals" name="goals" rows="4"></textarea>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="contact">Contact Info (WhatsApp/Email)</label>
+                        <input type="text" id="contact" name="contact_info" required>
+                    </div>
+                
+                    <button type="submit" class="form-button">Apply Now</button>
+                </form>
+    
+                <p id="form-message" class="form-message"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="content-section faq-section">        
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does it take to see results?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most people see noticeable changes in 3-6 weeks with consistent training and nutrition. Your progress depends on your starting point and dedication.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Are you a qualified fitness coach?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>While I may not have formal qualifications, I believe in the power of results. I've transformed my own physique and helped others do the same. My approach is based on practical experience. In the end, results speak louder than certificates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What's the difference between the Standard and Premium programs?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Standard Program (£5.99) is a push/pull/legs routine with workouts, sets/reps, rest times, and exercise tips. It's the routine I follow myself and works for any training stage.</p>
+                        <p>The Premium Program (£25) is a complete transformation blueprint with video demonstrations, exercise alternatives, training principles, and nutrition basics. It's designed for any training phase and includes everything you need for long-term success.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is the training program permanent?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, both training programs are one-time payments that give you lifetime access. Once purchased, you can either download or have the PDF document emailed to you, so you'll always have it available whenever you need it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does coaching work?
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After applying, I will contact you to schedule a call to discuss your specific needs and objectives. During this conversation, we'll explore your current situation and determine if coaching is a good fit for you.</p>
+                        <p>If we agree to move forward, you will receive personalized instructions tailored to your goals, along with weekly check-ins to track your progress and provide ongoing support.</p>
+                        <p>Even if coaching isn't for you, you'll still walk away with valuable tips and insights that can help you on your fitness journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="social-links">
+                    <a href="https://instagram.com/altharun1/" class="social-link" target="_blank">
+                        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                    <a href="https://tiktok.com/@harunfit" class="social-link" target="_blank">
+                        <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.53.02C13.84 0 15.14.01 16.44.02c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                        TikTok
+                    </a>
+                </div>
+                <div id="contact-email" class="contact-email">
+                    <p>For business inquiries or support:</p>
+                    <a href="mailto:admin@harunfit.com" class="email-link">admin@harunfit.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/HARUNFITwhite.png" alt="Harun Rahahla Fitness Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#programs">Programs</a>
+                    <a href="#coaching">Coaching</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact-email">Contact Me</a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2026 HarunFit | Web Programming & Design by Harun</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Premium Payment Modal (£25) -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="payment-modal-container">
+                <div class="payment-modal-left">
+                    <div class="payment-product-details">
+                        <h3>Complete Transformation</h3>
+                        <ul class="payment-product-features">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Complete Blueprint for Muscle Building
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                In-Depth PPL Training Program
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Video Demonstrations for each Exercise
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Alternatives for most Exercises (with video)
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                               Training Principles & Progression
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Nutrition Basics
+                            </li>
+                        </ul>
+                        <div class="payment-guarantee">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                            <span>Instant digital download + email delivery after payment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-modal-right">
+                    <div id="payment-form-container">
+                        <!-- Stripe payment form will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Standard Program Payment Modal (£5.99) -->
+    <div id="starter-payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="payment-modal-container">
+                <div class="payment-modal-left">
+                    <div class="payment-product-details">
+                        <h3>Standard Program</h3>
+                        <ul class="payment-product-features">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Full PPL Exercise Guide
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Routine that I Follow
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Machine Focused
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                Perfect for Any Stage
+                            </li>
+                        </ul>
+                        <div class="payment-guarantee">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                            <span>Instant digital download + email delivery after payment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-modal-right">
+                    <div id="starter-payment-form-container">
+                        <!-- Stripe payment form will be injected here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

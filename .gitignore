@@ -1,0 +1,38 @@
+# Sensitive Configuration Files
+private/config/db_config.php
+private/config/stripe_config.php
+
+# Environment files
+.env
+.env.local
+
+# Database files
+*.sql
+*.db
+
+# Logs
+private/logs/*.log
+!private/logs/.gitkeep
+
+# Uploaded files (if any)
+uploads/*
+!uploads/.gitkeep
+
+# Vendor directories (if using Composer)
+vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.cache

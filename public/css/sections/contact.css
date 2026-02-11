@@ -1,0 +1,87 @@
+/**
+ * CONTACT.CSS
+ * Contact Section and Social Links
+ */
+
+/* ============================================================================
+   CONTACT SECTION
+   ============================================================================ */
+
+.contact-section {
+    background-color: #fff;
+}
+
+/* ============================================================================
+   SOCIAL LINKS
+   ============================================================================ */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #f28c38;
+    color: white;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* ============================================================================
+   CONTACT EMAIL
+   ============================================================================ */
+
+.contact-email {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-email p {
+    margin-bottom: 10px;
+    color: var(--gray-color);
+}
+
+.email-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.email-link:hover {
+    color: var(--secondary-color);
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (max-width: 576px) {
+    .social-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .social-link {
+        justify-content: center;
+    }
+}

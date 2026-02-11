@@ -1,0 +1,79 @@
+/**
+ * COACHING.CSS
+ * Coaching Section and Application Form
+ */
+
+/* ============================================================================
+   COACHING SECTION
+   ============================================================================ */
+
+.coaching-section {
+    background-color: #fff;
+}
+
+.coaching-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.coaching-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ============================================================================
+   COACHING BENEFITS
+   ============================================================================ */
+
+.coaching-benefits {
+    flex: 1;
+}
+
+.coaching-benefits h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.coaching-benefits ul {
+    list-style: none;
+}
+
+.coaching-benefits li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-icon {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ============================================================================
+   COACHING FORM
+   ============================================================================ */
+
+.coaching-form {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+/* Form elements are styled in components.css */
+
+/* ============================================================================
+   RESPONSIVE
+   ============================================================================ */
+
+@media (min-width: 768px) {
+    .coaching-content {
+        flex-direction: row;
+    }
+}
