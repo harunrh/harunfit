@@ -1,7 +1,10 @@
 # HarunFit Website
 
-A fitness website with Stripe payment integration and admin dashboard.
+A secure web application for fitness with integrated payment processing.
 
+HarunFit allows users to purchase digital training programs (£5.99 Standard, £25 Premium) via Stripe and submit coaching applications. The platform was developed with a security-first approach, implementing OWASP Top 10 protections including CSRF tokens, SQL injection prevention using prepared statements, XSS mitigation through input sanitization, and secure session management. All payment processing is handled securely through Stripe Elements, ensuring sensitive card data never touches the server.
+
+**Live Demo**: [harunfit.com](https://harunfit.com)
 ## Features
 
 - Stripe Payment Integration (Standard £5.99 & Premium £25 programs)
