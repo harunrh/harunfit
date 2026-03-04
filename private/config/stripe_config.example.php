@@ -1,7 +1,6 @@
 <?php
 /**
  * Stripe Configuration Template
- * Copy this file to stripe_config.php and fill in your values
  */
 
 // Prevent direct access
