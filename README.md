@@ -1,6 +1,6 @@
 # HarunFit Website
 
-Secure fitness coaching website with Stripe payment integration and admin dashboard.
+A fitness website with Stripe payment integration and admin dashboard.
 
 ## Features
 
